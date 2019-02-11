@@ -8,7 +8,7 @@ const filesList = document.querySelector('#js-file-list');
 dropZone.addEventListener('dragover', (e) => onDragOver(e)); //élément ou une sélection de texte est glissé sur une cible de dépôt valide
 dropZone.addEventListener('drop', (e) => onDrop(e)); //Tirée lorsqu'un élément ou une sélection de texte est déposé sur une cible de dépôt valide.
 dropZone.addEventListener('dragstart', () => changeDropZoneState(true)); //glisser un élément ou une sélection de texte
-dropZone.addEventListener('USE_CORRECT_EVENT_HERE', () => changeDropZoneState(false));
+dropZone.addEventListener('dragleave', () => changeDropZoneState(false)); //élément glissé ou une sélection de texte quitte une cible de dépôt valide.
 
 function onDragOver(event) { //élément ou une sélection de texte est glissé sur une cible de dépôt valide
   event.stopPropagation(); //Évite que l'évènement courant ne se propage plus loin dans les phases de capture et de déploiement.
